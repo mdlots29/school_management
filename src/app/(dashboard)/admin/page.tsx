@@ -1,6 +1,6 @@
 import Announcement from "@/components/Announcement";
 import AttendanceChart from "@/components/AttendanceChart";
-import CountChart from "@/components/CountChart";
+import CountChartContainer from "@/components/CountChartContainer";
 import EventCalendar from "@/components/EventCalendar";
 import FinanceChart from "@/components/FinanceChart";
 import UserCard from "@/components/UserCard";
@@ -12,16 +12,16 @@ const Admin = () => {
       <div className="w-full lg:w-2/3 flex flex-col gap-8">
         {/* USER CARD */}
         <div className="flex gap-4 justify-between flex-wrap">
-          <UserCard type="student" />
-          <UserCard type="teacher" />
-          <UserCard type="parent" />
           <UserCard type="admin" />
+          <UserCard type="teacher" />
+          <UserCard type="student" />
+          <UserCard type="parent" />
         </div>
         {/* MIDDLE CHARTS */}
         <div className="flex gap-4 flex-col lg:flex-row">
           {/* COUNT CHARTS */}
           <div className="w-full lg:w-1/3 h-[450px]">
-            <CountChart />
+            <CountChartContainer />
           </div>
           {/* ATTENDANCE CHARTS */}
           <div className="w-full lg:w-2/3 h-[450px]">
