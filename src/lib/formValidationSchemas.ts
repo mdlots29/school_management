@@ -20,7 +20,9 @@ export const teacherSchema = z.object({
 });
 
 export const subjectSchema = z.object({
-    name: z.string().min(1, { message: "Subject name is required!" })
+  id: z.coerce.number().optional(),
+    name: z.string().min(1, { message: "Subject name is required!" }),
+    teachers: z.array(z.string())
   });
   
 export type TeacherSchema = z.infer<typeof teacherSchema>;
